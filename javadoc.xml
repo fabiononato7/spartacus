@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc destdir="doc" access="public" source="1.4" use="true" notree="false" nonavbar="false" noindex="false" splitindex="true" author="true" version="true" nodeprecatedlist="false" nodeprecated="false" sourcefiles="WEB-INF/src/com/nonato/spartacus/util/JDBCConexao.java" sourcepath="work;WEB-INF/src" classpath="WEB-INF/lib/mini-j2ee.jar;WEB-INF/lib/commons-fileupload.jar;C:\Tomcat\common\lib\jasper-runtime.jar;WEB-INF/lib/commons-lang.jar;WEB-INF/lib/firebirdsql-full.jar;WEB-INF/lib/jakarta-oro.jar;WEB-INF/classes;C:\Tomcat\common\lib\servlet-api.jar;WEB-INF/lib/commons-digester.jar;WEB-INF/lib/struts.jar;WEB-INF/lib/commons-collections.jar;WEB-INF/lib/mini-concurrent.jar;WEB-INF/lib/commons-chain-1.0.jar;WEB-INF/lib/commons-logging.jar;WEB-INF/lib/firebirdsql.jar;work;WEB-INF/lib/log4j-core.jar;WEB-INF/lib/commons-validator.jar;WEB-INF/lib/jaas.jar;WEB-INF/lib/commons-beanutils.jar;C:\Tomcat\common\lib\jsp-api.jar" doctitle="SPARTACUS"/>
+    </target>
+</project>

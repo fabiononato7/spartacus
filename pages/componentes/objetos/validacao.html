@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Teste de JS</title>
+		
+		<script type="text/javascript">
+		<!--
+
+		function validacao() {
+
+			 if ( document.forms[0].nome.value == "" ) {
+ 
+				alert( "Preencha o nome da cidade" );
+				document.forms[0].nome.focus();
+				return false;
+ 
+			}
+
+		}
+
+		//-->
+		</script>
+		
+	</head>
+	<body>
+		
+		<form name="cadastro" method="post" action="" onsubmit="javascript:return validacao()">
+			
+			<label>Nome</label>
+			<input type="text" name="nome" /><br />
+			<input type="submit" value="Enviar" />
+						
+		</form>
+		
+	</body>	
+</html>

@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+   
+   <!-- Entrada -->
+   <definition name="entrada" path="/pages/componentes/modelos/entrada.jsp" >
+   		<put name="titulo" value="$titulo" />
+		<put name="estilo" value="/pages/componentes/objetos/estilo.jsp" />
+		<put name="roteiro" value="/pages/componentes/objetos/roteiro.jsp" />
+   		<put name="cabecalho" value="$cabecalho" />
+   		<put name="mensagem" value="/pages/componentes/objetos/mensagem.jsp" />		
+   		<put name="formulario" value="$formulario" />
+   		<put name="rodape" value="$rodape" />  	
+   </definition>
+   
+   <!-- Apresentação -->
+   <definition name="apresentacao" path="/pages/componentes/modelos/apresentacao.jsp" >
+   		<put name="titulo" value="$titulo" />
+		<put name="estilo" value="/pages/componentes/objetos/estilo.jsp" />
+		<put name="roteiro" value="/pages/componentes/objetos/roteiro.jsp" />
+   		<put name="cabecalho" value="/pages/componentes/objetos/cabecalho.jsp" />
+   		<put name="menu" value="/pages/componentes/objetos/menu.jsp" />
+   		<put name="mensagem" value="/pages/componentes/objetos/mensagem.jsp" />	
+   		<put name="formulario" value="$formulario" />
+   		<put name="rodape" value="/pages/componentes/objetos/rodape.jsp" />  	
+   </definition>
+   
+   <!-- Cadastro -->
+   <definition name="cadastro" path="/pages/componentes/modelos/cadastro.jsp" >
+   		<put name="titulo" value="$titulo" />
+		<put name="estilo" value="/pages/componentes/objetos/estilo.jsp" />
+		<put name="roteiro" value="/pages/componentes/objetos/roteiro.jsp" />
+   		<put name="cabecalho" value="/pages/componentes/objetos/cabecalho.jsp" />
+   		<put name="menu" value="/pages/componentes/objetos/menu.jsp" />
+   		<put name="mensagem" value="/pages/componentes/objetos/mensagem.jsp" />
+   		<put name="botoes" value="/pages/componentes/botoes/cadastro.jsp" />  
+		<put name="acoes" value="$acoes" />  		
+   		<put name="formulario" value="$formulario" />
+   		<put name="rodape" value="/pages/componentes/objetos/rodape.jsp" />  	
+   </definition>
+   
+   <!-- Mestre/Detalhe -->
+   <definition name="mestre" path="/pages/componentes/modelos/mestre.jsp" >
+   		<put name="titulo" value="$titulo" />
+		<put name="estilo" value="/pages/componentes/objetos/estilo.jsp" />
+		<put name="roteiro" value="/pages/componentes/objetos/roteiro.jsp" />
+   		<put name="cabecalho" value="/pages/componentes/objetos/cabecalho.jsp" />
+   		<put name="menu" value="/pages/componentes/objetos/menu.jsp" />
+   		<put name="mensagem" value="/pages/componentes/objetos/mensagem.jsp" />
+   		<put name="botoes" value="/pages/componentes/botoes/detalhe.jsp" />  
+		<put name="acoes" value="$acoes" />  		
+   		<put name="formulario" value="$formulario" />
+   		<put name="lista" value="$lista" />
+   		<put name="pagina" value="$pagina" /> 
+   		<put name="rodape" value="/pages/componentes/objetos/rodape.jsp" />  	
+   </definition>
+   
+   <!-- Venda -->
+   <definition name="venda" path="/pages/componentes/modelos/venda.jsp" >
+   		<put name="titulo" value="$titulo" />
+		<put name="estilo" value="/pages/componentes/objetos/estilo.jsp" />
+		<put name="roteiro" value="/pages/componentes/objetos/roteiro.jsp" />
+   		<put name="cabecalho" value="/pages/componentes/objetos/cabecalho.jsp" />
+   		<put name="menu" value="/pages/componentes/objetos/menu.jsp" />
+   		<put name="mensagem" value="/pages/componentes/objetos/mensagem.jsp" />
+   		<put name="botoes" value="/pages/componentes/botoes/venda.jsp" />  
+		<put name="acoes" value="$acoes" />  
+		<put name="pesquisa" value="$pesquisa" />		
+   		<put name="formulario" value="$formulario" />
+   		<put name="lista" value="$lista" />
+   		<put name="pagina" value="$pagina" /> 
+   		<put name="rodape" value="/pages/componentes/objetos/rodape.jsp" />  	
+   </definition>
+	
+   <!-- Exibir -->
+   <definition name="exibir" path="/pages/componentes/modelos/exibir.jsp">
+   		<put name="titulo" value="$titulo" />
+		<put name="estilo" value="/pages/componentes/objetos/estilo.jsp" />
+		<put name="roteiro" value="/pages/componentes/objetos/roteiro.jsp" />
+   		<put name="cabecalho" value="/pages/componentes/objetos/cabecalho.jsp" />
+   		<put name="menu" value="/pages/componentes/objetos/menu.jsp" />
+   		<put name="mensagem" value="/pages/componentes/objetos/mensagem.jsp" />
+   		<put name="botoes" value="/pages/componentes/botoes/listar.jsp" /> 
+   		<put name="acoes" value="$acoes" /> 
+   		<put name="lista" value="$lista" />   
+   		<put name="pagina" value="$pagina" /> 
+   		<put name="rodape" value="/pages/componentes/objetos/rodape.jsp" />   	 
+   </definition>
+   
+   <!-- Relatório -->
+   <definition name="relatorio" extends="exibir">
+   		<put name="titulo" value="$titulo" />
+		<put name="estilo" value="/pages/componentes/objetos/estilo.jsp" />
+		<put name="roteiro" value="/pages/componentes/objetos/roteiro.jsp" />
+   		<put name="cabecalho" value="/pages/componentes/objetos/cabecalho.jsp" />
+   		<put name="menu" value="/pages/componentes/objetos/menu.jsp" />
+   		<put name="mensagem" value="/pages/componentes/objetos/mensagem.jsp" />
+   		<put name="botoes" value="/pages/componentes/botoes/visualizar.jsp" /> 
+   		<put name="acoes" value="$acoes" /> 
+   		<put name="pesquisa" value="$pesquisa" />
+   		<put name="lista" value="$lista" />   
+   		<put name="rodape" value="/pages/componentes/objetos/rodape.jsp" />  
+   </definition>
+   
+   <!-- Estrangeiro -->
+   <definition name="estrangeiro" path="/pages/componentes/modelos/estrangeiro.jsp">
+   		<put name="titulo" value="$titulo" />
+		<put name="estilo" value="/pages/componentes/objetos/estilo.jsp" />
+		<put name="roteiro" value="/pages/componentes/objetos/roteiro.jsp" />
+   		<put name="cabecalho" value="/pages/componentes/objetos/cabecalho.jsp" />
+   		<put name="menu" value="/pages/componentes/objetos/menu.jsp" />
+   		<put name="mensagem" value="/pages/componentes/objetos/mensagem.jsp" />
+   		<put name="pesquisa" value="$pesquisa" />   
+   		<put name="lista" value="$lista" />   
+   		<put name="pagina" value="$pagina" /> 
+   		<put name="rodape" value="/pages/componentes/objetos/rodape.jsp" />   	 
+   </definition>
+   
+   <!-- Cidade -->
+   <definition name="cidade" extends="cadastro" >
+   		<put name="titulo" value="Cidade" />
+   		<put name="acoes" value="/pages/admin/cidade/acoes.jsp" />
+   		<put name="formulario" value="$formulario" />   		
+   </definition>
+   
+   <definition name="cidade.inserir" extends="cidade" >
+   		<put name="formulario" value="/pages/admin/cidade/inserir.jsp" />
+   </definition>
+   
+   <definition name="cidade.alterar" extends="cidade" >
+   		<put name="formulario" value="/pages/admin/cidade/alterar.jsp" />
+   </definition>
+   
+   <definition name="cidade.excluir" extends="cidade" >
+   		<put name="formulario" value="/pages/admin/cidade/excluir.jsp" />
+   </definition>
+
+   <definition name="cidade.exibir" extends="exibir" >
+   		<put name="titulo" value="Cidade" />
+   		<put name="acoes" value="/pages/admin/cidade/acoes.jsp" /> 
+   		<put name="pesquisa" value="/pages/admin/cidade/buscar.jsp" />   
+   		<put name="lista" value="/pages/admin/cidade/exibir.jsp" />   
+   		<put name="pagina" value="/pages/admin/cidade/pagina.jsp" /> 
+   </definition>
+
+   <!-- Cidade/Região --> 	
+   <definition name="cidade_regiao" extends="mestre" >
+   		<put name="titulo" value="Cidade/Região" />
+   		<put name="acoes" value="/pages/admin/cidade_regiao/acoes.jsp" />
+   		<put name="formulario" value="/pages/admin/cidade_regiao/regiao.jsp" />
+   		<put name="lista" value="$lista" />
+   		<put name="pagina" value="/pages/admin/cidade_regiao/pagina.jsp" />
+   </definition>
+   
+   <definition name="cidade_regiao.exibir" extends="cidade_regiao" >
+   		<put name="lista" value="/pages/admin/cidade_regiao/exibir.jsp" />
+   </definition>
+   
+   <definition name="cidade_regiao.adicionar" extends="cidade_regiao" >
+   		<put name="lista" value="/pages/admin/cidade_regiao/adicionar.jsp" />
+   		<put name="pagina" value="/pages/admin/cidade_regiao/pagina_adicionar.jsp" />
+   </definition>
+   
+   <definition name="cidade_regiao.alterar" extends="cadastro" >
+   		<put name="titulo" value="Cidade/Região" />
+   		<put name="botoes" value="/pages/componentes/botoes/detalhe.jsp" />
+   		<put name="acoes" value="/pages/admin/cidade_regiao/acoes.jsp" />
+   		<put name="formulario" value="/pages/admin/cidade_regiao/alterar.jsp" />
+   </definition>
+   
+   <definition name="cidade_regiao.excluir" extends="cadastro" >
+   		<put name="titulo" value="Cidade/Região" />
+   		<put name="botoes" value="/pages/componentes/botoes/detalhe.jsp" />
+   		<put name="acoes" value="/pages/admin/cidade_regiao/acoes.jsp" />
+   		<put name="formulario" value="/pages/admin/cidade_regiao/excluir.jsp" />
+   </definition>
+   
+   <!-- Condição -->
+   <definition name="condicao" extends="cadastro" >
+   		<put name="titulo" value="Condição" />
+   		<put name="acoes" value="/pages/admin/condicao/acoes.jsp" />
+   		<put name="formulario" value="$formulario" />   		
+   </definition> 
+      
+   <definition name="condicao.inserir" extends="condicao" >
+   		<put name="formulario" value="/pages/admin/condicao/inserir.jsp" />
+   </definition>
+   
+   <definition name="condicao.alterar" extends="condicao" >
+   		<put name="formulario" value="/pages/admin/condicao/alterar.jsp" />
+   </definition>
+   
+   <definition name="condicao.excluir" extends="condicao" >
+   		<put name="formulario" value="/pages/admin/condicao/excluir.jsp" />
+   </definition>
+
+   <definition name="condicao.exibir" extends="exibir" >
+   		<put name="titulo" value="Condição" />
+   		<put name="acoes" value="/pages/admin/condicao/acoes.jsp" /> 
+   		<put name="pesquisa" value="/pages/admin/condicao/buscar.jsp" />   
+   		<put name="lista" value="/pages/admin/condicao/exibir.jsp" />   
+   		<put name="pagina" value="/pages/admin/condicao/pagina.jsp" /> 
+   </definition> 
+      
+   <!-- Empresa -->   
+   <definition name="empresa" extends="cadastro" >
+   		<put name="titulo" value="Empresa" />
+   		<put name="acoes" value="/pages/admin/empresa/acoes.jsp" />
+   		<put name="formulario" value="$formulario" />   		
+   </definition>
+         
+   <definition name="empresa.inserir" extends="empresa" >
+   		<put name="formulario" value="/pages/admin/empresa/inserir.jsp" />
+   </definition>
+   
+   <definition name="empresa.alterar" extends="empresa" >
+   		<put name="formulario" value="/pages/admin/empresa/alterar.jsp" />
+   </definition>
+   
+   <definition name="empresa.excluir" extends="empresa" >
+   		<put name="formulario" value="/pages/admin/empresa/excluir.jsp" />
+   </definition>
+
+   <definition name="empresa.exibir" extends="exibir" >
+   		<put name="titulo" value="Empresa" />
+   		<put name="acoes" value="/pages/admin/empresa/acoes.jsp" /> 
+   		<put name="pesquisa" value="/pages/admin/empresa/buscar.jsp" />   
+   		<put name="lista" value="/pages/admin/empresa/exibir.jsp" />   
+   		<put name="pagina" value="/pages/admin/empresa/pagina.jsp" /> 
+   </definition> 
+   
+   <definition name="empresa.condicao" extends="estrangeiro" >
+   		<put name="titulo" value="Condição" />
+   		<put name="pesquisa" value="/pages/admin/condicao/buscar.jsp" />   
+   		<put name="lista" value="/pages/admin/empresa/condicao.jsp" />   
+   		<put name="pagina" value="/pages/admin/empresa/pagina_condicao.jsp" /> 
+   </definition> 
+   
+   <definition name="empresa.cidade" extends="estrangeiro" >
+   		<put name="titulo" value="Cidade" />
+   		<put name="pesquisa" value="/pages/admin/cidade/buscar.jsp" />   
+   		<put name="lista" value="/pages/admin/empresa/cidade.jsp" />   
+   		<put name="pagina" value="/pages/admin/empresa/pagina_cidade.jsp" />
+   </definition>
+   
+   <!-- Lote -->
+   <definition name="lote" extends="cadastro" >
+   		<put name="titulo" value="Lote" />
+   		<put name="acoes" value="/pages/admin/lote/acoes.jsp" />
+   		<put name="formulario" value="$formulario" />   		
+   </definition>
+   
+   <definition name="lote.inserir" extends="lote" >
+   		<put name="formulario" value="/pages/admin/lote/inserir.jsp" />
+   </definition>
+   
+   <definition name="lote.alterar" extends="lote" >
+   		<put name="formulario" value="/pages/admin/lote/alterar.jsp" />
+   </definition>
+   
+   <definition name="lote.excluir" extends="lote" >
+   		<put name="formulario" value="/pages/admin/lote/excluir.jsp" />
+   </definition>
+
+   <definition name="lote.exibir" extends="exibir" >
+   		<put name="titulo" value="Lote" />
+   		<put name="acoes" value="/pages/admin/lote/acoes.jsp" /> 
+   		<put name="pesquisa" value="/pages/admin/lote/buscar.jsp" />   
+   		<put name="lista" value="/pages/admin/lote/exibir.jsp" />   
+   		<put name="pagina" value="/pages/admin/lote/pagina.jsp" /> 
+   </definition>
+   
+   <definition name="lote.produto" extends="estrangeiro" >
+   		<put name="titulo" value="Produto" />
+   		<put name="pesquisa" value="/pages/admin/produto/buscar.jsp" />   
+   		<put name="lista" value="/pages/admin/lote/produto.jsp" />   
+   		<put name="pagina" value="/pages/admin/lote/pagina_produto.jsp" />
+   </definition>
+       
+   <!-- Menu -->      
+   <definition name="menu.login" extends="entrada" >
+   		<put name="titulo" value="Login" />
+   		<put name="cabecalho" value="/pages/comum/menu/cabecalho.jsp" />	
+   		<put name="formulario" value="/pages/comum/menu/login.jsp" />
+   		<put name="rodape" value="/pages/comum/menu/rodape.jsp" /> 
+   </definition>
+
+  <definition name="menu.principal" extends="apresentacao" >
+   		<put name="titulo" value="Spartacus" />
+   		<put name="formulario" value="/pages/comum/menu/principal.jsp" />	
+   </definition>
+  
+   <!-- Pagamento -->  
+   <definition name="pagamento" extends="cadastro" >
+   		<put name="titulo" value="Pagamento" />
+   		<put name="acoes" value="/pages/admin/pagamento/acoes.jsp" />
+   		<put name="formulario" value="$formulario" />
+   </definition>
+   
+   <definition name="pagamento.alterar" extends="pagamento" >
+   		<put name="formulario" value="/pages/admin/pagamento/alterar.jsp" />
+   </definition>
+   
+   <definition name="pagamento.excluir" extends="pagamento" >
+   		<put name="formulario" value="/pages/admin/pagamento/excluir.jsp" />
+   </definition>
+
+   <definition name="pagamento.exibir" extends="exibir" >
+   		<put name="titulo" value="Pagamento" />
+   		<put name="acoes" value="/pages/admin/pagamento/acoes.jsp" /> 
+   		<put name="pesquisa" value="/pages/admin/pagamento/buscar.jsp" />   
+   		<put name="lista" value="/pages/admin/pagamento/exibir.jsp" />   
+   		<put name="pagina" value="/pages/admin/pagamento/pagina.jsp" /> 
+   </definition> 
+   
+   <definition name="pagamento.consultar" extends="exibir" >
+   		<put name="titulo" value="Pagamento" />
+   		<put name="botoes" value="/pages/componentes/botoes/consultar.jsp" /> 
+   		<put name="acoes" value="/pages/admin/pagamento/acoes_cliente.jsp" /> 
+   		<put name="pesquisa" value="/pages/admin/pagamento/buscar_consulta.jsp" />   
+   		<put name="lista" value="/pages/admin/pagamento/exibir_cliente.jsp" /> 
+   		<put name="pagina" value="/pages/admin/pagamento/pagina_consultar.jsp" />  
+   </definition>
+   
+   <!-- Pedido -->  
+   <definition name="pedido" extends="venda" >
+   		<put name="titulo" value="Pedido" />
+		<put name="acoes" value="/pages/cliente/pedido/acoes.jsp" />  
+		<put name="pesquisa" value="$pesquisa" />
+   		<put name="formulario" value="/pages/cliente/pedido/empresa.jsp" />
+   		<put name="lista" value="$lista" />
+   		<put name="pagina" value="/pages/cliente/pedido/pagina.jsp" /> 
+   </definition> 
+   
+   <definition name="pedido.cliente" extends="pedido" >
+   		<put name="lista" value="/pages/cliente/pedido/exibir.jsp" />
+   </definition> 
+
+   <definition name="pedido.produto" extends="pedido" >
+        <put name="pesquisa" value="/pages/cliente/pedido/buscar_produto.jsp" />
+   		<put name="lista" value="/pages/cliente/pedido/produto.jsp" />	
+   		<put name="pagina" value="/pages/cliente/pedido/pagina_produto.jsp" />
+   </definition> 
+   
+   <definition name="pedido.carrinho" extends="pedido" >
+   		
+   		<!-- inserir busca de produtos no carrinho -->
+   		
+   		<put name="lista" value="/pages/cliente/pedido/carrinho.jsp" />
+   		<put name="pagina" value="/pages/cliente/pedido/pagina_carrinho.jsp" />
+   </definition> 
+   
+   <definition name="pedido.carrinho.exibir" extends="pedido" >
+   		
+   		<!-- inserir busca de produtos no carrinho -->
+   		
+   		<put name="lista" value="/pages/cliente/pedido/carrinho_exibir.jsp" />
+   		<put name="pagina" value="/pages/cliente/pedido/pagina_carrinho.jsp" />
+   </definition> 
+   
+   <definition name="pedido.exibir" extends="exibir" >
+   		<put name="titulo" value="Pedido" />
+   		<put name="acoes" value="/pages/cliente/pedido/acoes.jsp" /> 
+   		<put name="pesquisa" value="/pages/cliente/pedido/buscar.jsp" />   
+   		<put name="lista" value="/pages/cliente/pedido/exibir.jsp" />   
+   		<put name="pagina" value="/pages/cliente/pedido/pagina.jsp" /> 
+   </definition> 
+          
+   <definition name="pedido.relatorio" extends="relatorio" >
+   		<put name="titulo" value="Pedido" />
+   		<put name="acoes" value="/pages/cliente/pedido/acoes.jsp" /> 
+   		<put name="lista" value="/pages/cliente/pedido/relatorio.jsp" />   
+   </definition> 
+   
+  <definition name="print.pedido.relatorio" extends="relatorio">
+   		<put name="titulo" value="Pedido" />
+   		<put name="cabecalho" value="/pages/componentes/objetos/cabecalho.jsp" />
+   		<put name="menu" value="$menu" />
+   		<put name="mensagem" value="$mensagem" />
+		<put name="botoes" value="/pages/componentes/botoes/relatorio.jsp" />
+   		<put name="acoes" value="$acoes" /> 
+   		<put name="pesquisa" value="$pesquisa" />
+   		<put name="lista" value="/pages/cliente/pedido/relatorio.jsp" />     
+   		<put name="rodape" value="$rodape" />  
+   </definition> 
+   
+   <!-- Pedido/Promoção -->   
+   <definition name="pedido.promocao" extends="venda" >
+   		<put name="titulo" value="Pedido" />
+		<put name="acoes" value="/pages/cliente/pedido/promocao_acoes.jsp" />  
+		<put name="pesquisa" value="$pesquisa" />		
+   		<put name="formulario" value="/pages/cliente/pedido/empresa.jsp" />
+   		<put name="lista" value="$lista" />
+   		<put name="pagina" value="/pages/cliente/pedido/pagina.jsp" /> 
+   </definition>
+   
+   <definition name="pedido.promocao.listar" extends="pedido.promocao" >
+		<put name="pesquisa" value="/pages/cliente/pedido/buscar_promocao.jsp" />   		
+   		<put name="lista" value="/pages/cliente/pedido/promocao_listar.jsp" />
+   		<put name="pagina" value="/pages/cliente/pedido/pagina_promocao_listar.jsp" /> 
+   </definition>
+   
+   <definition name="pedido.promocao.produto" extends="pedido.promocao" >	
+   		<put name="pesquisa" value="/pages/cliente/pedido/buscar_promocao_produto.jsp" />
+   		<put name="lista" value="/pages/cliente/pedido/promocao_produto.jsp" />
+   		<put name="pagina" value="/pages/cliente/pedido/pagina_promocao_produto.jsp" /> 
+   </definition>
+
+   <definition name="pedido.promocao.carrinho" extends="pedido.promocao" >
+        
+        <!-- inserir busca de produtos no carrinho -->
+        	
+   		<put name="lista" value="/pages/cliente/pedido/promocao_carrinho.jsp" />
+   		<put name="pagina" value="/pages/cliente/pedido/pagina_promocao_carrinho.jsp" /> 
+   </definition>
+   
+   <definition name="pedido.promocao.carrinho.exibir" extends="pedido.promocao" >
+        
+        <!-- inserir busca de produtos no carrinho -->
+        	
+   		<put name="lista" value="/pages/cliente/pedido/promocao_carrinho_exibir.jsp" />
+   		<put name="pagina" value="/pages/cliente/pedido/pagina_promocao_carrinho_exibir.jsp" /> 
+   </definition>   
+      
+   <!-- Produto -->   
+   <definition name="produto" extends="cadastro" >
+   		<put name="titulo" value="Produto" />
+   		<put name="acoes" value="/pages/admin/produto/acoes.jsp" />
+   		<put name="formulario" value="$formulario" />   		
+   </definition>
+   
+   <definition name="produto.inserir" extends="produto" >
+   		<put name="formulario" value="/pages/admin/produto/inserir.jsp" />
+   </definition>
+   
+   <definition name="produto.alterar" extends="produto" >
+   		<put name="formulario" value="/pages/admin/produto/alterar.jsp" />
+   </definition>
+   
+   <definition name="produto.excluir" extends="produto" >
+   		<put name="formulario" value="/pages/admin/produto/excluir.jsp" />
+   </definition>
+
+   <definition name="produto.exibir" extends="exibir" >
+   		<put name="titulo" value="Produto" />
+   		<put name="acoes" value="/pages/admin/produto/acoes.jsp" /> 
+   		<put name="pesquisa" value="/pages/admin/produto/buscar.jsp" />   
+   		<put name="lista" value="/pages/admin/produto/exibir.jsp" />   
+   		<put name="pagina" value="/pages/admin/produto/pagina.jsp" /> 
+   </definition>
+   
+   <definition name="produto.consultar" extends="exibir" >
+   		<put name="titulo" value="Produto" />
+   		<put name="botoes" value="/pages/componentes/botoes/consultar.jsp" /> 
+   		<put name="acoes" value="/pages/admin/produto/acoes_cliente.jsp" /> 
+   		<put name="pesquisa" value="/pages/admin/produto/buscar_consulta.jsp" />   
+   		<put name="lista" value="/pages/admin/produto/exibir_cliente.jsp" /> 
+   		<put name="pagina" value="/pages/admin/produto/pagina_consulta.jsp" />  
+   </definition>
+   
+   <definition name="produto.empresa" extends="estrangeiro" >
+   		<put name="titulo" value="Empresa" />
+   		<put name="pesquisa" value="/pages/admin/empresa/buscar.jsp" />   
+   		<put name="lista" value="/pages/admin/produto/empresa.jsp" />   
+   		<put name="pagina" value="/pages/admin/produto/pagina_empresa.jsp" />
+   </definition> 
+      
+   <!-- Produto/Promoção --> 
+   <definition name="produto_promocao" extends="mestre" >
+   		<put name="titulo" value="Produto/Promoção" />
+   		<put name="acoes" value="/pages/admin/produto_promocao/acoes.jsp" />
+   		<put name="formulario" value="/pages/admin/produto_promocao/promocao.jsp" />
+   		<put name="lista" value="$lista" />
+   		<put name="pagina" value="/pages/admin/produto_promocao/pagina.jsp" />
+   </definition>
+   
+   <definition name="produto_promocao.exibir" extends="produto_promocao" >
+   		<put name="lista" value="/pages/admin/produto_promocao/exibir.jsp" />
+   </definition>
+   
+   <definition name="produto_promocao.adicionar" extends="produto_promocao" >
+   		<put name="lista" value="/pages/admin/produto_promocao/adicionar.jsp" />
+   		<put name="pagina" value="/pages/admin/produto_promocao/pagina_adicionar.jsp" />
+   </definition>
+   
+   <definition name="produto_promocao.alterar" extends="cadastro" >
+   		<put name="titulo" value="Produto/Promoção" />
+   		<put name="botoes" value="/pages/componentes/botoes/detalhe.jsp" />
+   		<put name="acoes" value="/pages/admin/produto_promocao/acoes.jsp" />
+   		<put name="formulario" value="/pages/admin/produto_promocao/alterar.jsp" />
+   </definition>
+   
+   <definition name="produto_promocao.excluir" extends="cadastro" >
+   		<put name="titulo" value="Produto/Promoção" />
+   		<put name="botoes" value="/pages/componentes/botoes/detalhe.jsp" />
+   		<put name="acoes" value="/pages/admin/produto_promocao/acoes.jsp" />
+   		<put name="formulario" value="/pages/admin/produto_promocao/excluir.jsp" />
+   </definition>
+   
+   <!-- Promoção -->
+   <definition name="promocao" extends="cadastro" >
+   		<put name="titulo" value="Promoção" />
+   		<put name="acoes" value="/pages/admin/promocao/acoes.jsp" />
+   		<put name="formulario" value="$formulario" />   		
+   </definition>
+      
+   <definition name="promocao.inserir" extends="promocao" >
+   		<put name="formulario" value="/pages/admin/promocao/inserir.jsp" />
+   </definition>
+   
+   <definition name="promocao.alterar" extends="promocao" >
+   		<put name="formulario" value="/pages/admin/promocao/alterar.jsp" />
+   </definition>
+   
+   <definition name="promocao.excluir" extends="promocao" >
+   		<put name="formulario" value="/pages/admin/promocao/excluir.jsp" />
+   </definition>
+
+   <definition name="promocao.exibir" extends="exibir" >
+   		<put name="titulo" value="Promoção" />
+   		<put name="acoes" value="/pages/admin/promocao/acoes.jsp" /> 
+   		<put name="pesquisa" value="/pages/admin/promocao/buscar.jsp" />   
+   		<put name="lista" value="/pages/admin/promocao/exibir.jsp" />   
+   		<put name="pagina" value="/pages/admin/promocao/pagina.jsp" /> 
+   </definition>
+     
+   <!-- Região -->  
+   <definition name="regiao" extends="cadastro" >
+   		<put name="titulo" value="Região" />
+   		<put name="acoes" value="/pages/admin/regiao/acoes.jsp" />
+   		<put name="formulario" value="$formulario" />   		
+   </definition>
+          
+   <definition name="regiao.inserir" extends="regiao" >
+   		<put name="formulario" value="/pages/admin/regiao/inserir.jsp" />
+   </definition>
+   
+   <definition name="regiao.alterar" extends="regiao" >
+   		<put name="formulario" value="/pages/admin/regiao/alterar.jsp" />
+   </definition>
+   
+   <definition name="regiao.excluir" extends="regiao" >
+   		<put name="formulario" value="/pages/admin/regiao/excluir.jsp" />
+   </definition>
+
+   <definition name="regiao.exibir" extends="exibir" >
+   		<put name="titulo" value="Região" />
+   		<put name="acoes" value="/pages/admin/regiao/acoes.jsp" /> 
+   		<put name="pesquisa" value="/pages/admin/regiao/buscar.jsp" />   
+   		<put name="lista" value="/pages/admin/regiao/exibir.jsp" />   
+   		<put name="pagina" value="/pages/admin/regiao/pagina.jsp" /> 
+   </definition> 
+    
+   <definition name="regiao.empresa" extends="estrangeiro" >
+   		<put name="titulo" value="Empresa" />
+   		<put name="pesquisa" value="/pages/admin/empresa/buscar.jsp" />   
+   		<put name="lista" value="/pages/admin/regiao/empresa.jsp" />   
+   		<put name="pagina" value="/pages/admin/regiao/pagina_empresa.jsp" /> 
+   </definition> 
+   
+   <!-- Relatórios -->
+   <definition name="relatorio.clientes.debito" extends="relatorio">
+   		<put name="titulo" value="Clientes em Débito" />
+   		<put name="cabecalho" value="/pages/componentes/objetos/cabecalho.jsp" />
+   		<put name="menu" value="$menu" />
+   		<put name="mensagem" value="$mensagem" />
+		<put name="botoes" value="/pages/componentes/botoes/relatorio.jsp" />
+   		<put name="acoes" value="$acoes" /> 
+   		<put name="pesquisa" value="$pesquisa" />
+   		<put name="lista" value="/pages/comum/relatorio/clientesEmDebito.jsp" />   
+   		<put name="rodape" value="$rodape" />  
+   </definition> 
+
+   <definition name="relatorio.produtos.vendido" extends="relatorio">
+   		<put name="titulo" value="Produtos Mais Vendidos" />
+   		<put name="cabecalho" value="/pages/componentes/objetos/cabecalho.jsp" />
+   		<put name="menu" value="$menu" />
+   		<put name="mensagem" value="$mensagem" />
+		<put name="botoes" value="/pages/componentes/botoes/relatorio.jsp" />
+   		<put name="acoes" value="$acoes" /> 
+   		<put name="pesquisa" value="$pesquisa" />
+   		<put name="lista" value="/pages/comum/relatorio/produtosMaisVendidos.jsp" />   
+   		<put name="rodape" value="$rodape" />  
+   </definition> 
+   
+    <definition name="relatorio.vendas.regiao" extends="relatorio">
+   		<put name="titulo" value="Produtos Mais Vendidos" />
+   		<put name="cabecalho" value="/pages/componentes/objetos/cabecalho.jsp" />
+   		<put name="menu" value="$menu" />
+   		<put name="mensagem" value="$mensagem" />
+		<put name="botoes" value="/pages/componentes/botoes/relatorio.jsp" />
+   		<put name="acoes" value="$acoes" /> 
+   		<put name="pesquisa" value="$pesquisa" />
+   		<put name="lista" value="/pages/comum/relatorio/vendasPorRegiao.jsp" />   
+   		<put name="rodape" value="$rodape" />  
+   </definition>  
+ 
+</tiles-definitions>

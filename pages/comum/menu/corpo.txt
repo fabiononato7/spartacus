@@ -1,0 +1,17 @@
+<p>&nbsp;</p>
+<p>
+O projeto SPARTACUS &eacute; uma pesquisa financiada pelo Laborat&oacute;rio Farmac&ecirc;utico Elofar, 
+atrav&eacute;s do seu representante no noroeste de Minas: Raimundo Nonato dos Santos.
+</p>
+<p>
+Esse projeto busca descobrir novas alternativas de mercado para o laborat&oacute;rio distribuir
+os seus produtos, com maiores facilidades e comodidades para os seus clientes.
+</p>
+<p>
+O SPARTACUS &eacute; um projeto open-source, desenvolvido na plataforma Java, procurando utilizar 
+as melhores pr&aacute;ticas do mercado.
+</p>
+<p>
+Para maiores informa&ccedil;&otilde;es: <font color="#0000FF"><strong>org_spartacus@yahoo.com.br</strong></font>
+</p>
+         

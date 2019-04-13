@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	
+	<!-- Definição de Form-Beans -->
+	<form-beans>
+		
+		<!-- Cidade -->
+		<form-bean name="cidadeForm" type="com.nonato.spartacus.forms.CidadeForm" />
+
+		<!-- Cidade/Região -->
+		<form-bean name="cidadeRegiaoForm" type="com.nonato.spartacus.forms.CidadeRegiaoForm" />
+		
+		<!-- Condicao -->
+		<form-bean name="condicaoForm" type="com.nonato.spartacus.forms.CondicaoForm" />
+		
+		<!-- Empresa -->
+		<form-bean name="empresaForm" type="com.nonato.spartacus.forms.EmpresaForm" />
+				
+		<!-- Item -->
+		<form-bean name="itemForm" type="com.nonato.spartacus.forms.ItemForm" />
+		
+		<!-- Lote -->
+		<form-bean name="loteForm" type="com.nonato.spartacus.forms.LoteForm" />
+		
+		<!-- Menu -->
+		<form-bean name="menuForm" type="com.nonato.spartacus.forms.MenuForm" />
+		
+		<!-- Pagamento -->
+		<form-bean name="pagamentoForm" type="com.nonato.spartacus.forms.PagamentoForm" />
+		
+		<!-- Pedido -->
+		<form-bean name="pedidoForm" type="com.nonato.spartacus.forms.PedidoForm" />
+		
+		<!-- Produto -->
+		<form-bean name="produtoForm" type="com.nonato.spartacus.forms.ProdutoForm" />
+		
+		<!-- Produto/Promoção -->
+		<form-bean name="produtoPromocaoForm" type="com.nonato.spartacus.forms.ProdutoPromocaoForm" />
+		
+		<!-- Promoção -->
+		<form-bean name="promocaoForm" type="com.nonato.spartacus.forms.PromocaoForm" />
+				
+		<!-- Região -->
+		<form-bean name="regiaoForm" type="com.nonato.spartacus.forms.RegiaoForm" />
+				
+	</form-beans>
+	<!-- Fim da Definição de Form-Beans -->
+	
+	<!-- Definição de Global-Forwards -->
+	<global-forwards>
+		
+		<!-- Início -->
+		<forward name="inicio" path="/pages/inicio.jsp" />	
+		
+	</global-forwards>
+	<!-- Fim da Definição de Global-Forwards -->
+	
+	<!-- Definição de Action-Mappings -->
+	<action-mappings>
+			
+		<!-- Cidade -->
+		<action
+		
+			path="/cidade"
+			type="com.nonato.spartacus.actions.CidadeAction"
+			name="cidadeForm"
+			parameter="acao"
+			scope="session"
+			validate="true"
+			input="cidade.inserir">
+			
+			<!-- Tela -->
+			<forward name="tela_inserir" path="cidade.inserir" redirect="false" />
+			<forward name="tela_alterar" path="cidade.alterar" redirect="false" />
+			<forward name="tela_excluir" path="cidade.excluir" redirect="false" />
+			
+			<!-- Listar -->
+			<forward name="listar" path="cidade.exibir" redirect="false" />	
+		
+		</action>
+		
+		<!-- Cidade/Região -->
+		<action
+		
+			path="/cidadeRegiao"
+			type="com.nonato.spartacus.actions.CidadeRegiaoAction"
+			name="cidadeRegiaoForm"
+			parameter="acao"
+			scope="session"
+			validate="true"
+			input="cidaderegiao.exibir">
+			
+			<!-- Tela -->
+			<forward name="tela_adicionar" path="cidade_regiao.adicionar" redirect="false" />
+			<forward name="tela_alterar" path="cidade_regiao.alterar" redirect="false" />
+			<forward name="tela_excluir" path="cidade_regiao.excluir" redirect="false" />
+						
+			<!-- Listar -->
+			<forward name="listar" path="cidade_regiao.exibir" redirect="false" />
+						
+			<!-- Estrangeiros -->
+			<forward name="listar_cidades" path="/cidadeRegiao.do?acao=listarCidades" redirect="false" />
+			
+			<forward name="estrangeiro_empresa" path="empresa.cidade" redirect="false" />
+			<forward name="exportar_empresa" path="/empresa.do?acao=telaInserir" redirect="false" />
+		
+		</action>	
+		
+		<!-- Condicao -->
+		<action
+		
+			path="/condicao"
+			type="com.nonato.spartacus.actions.CondicaoAction"
+			name="condicaoForm"
+			parameter="acao"
+			scope="session"
+			validate="true"
+			input="condicao.exibir">
+			
+			<!-- Tela -->
+			<forward name="tela_inserir" path="condicao.inserir" redirect="false" />
+			<forward name="tela_alterar" path="condicao.alterar" redirect="false" />
+			<forward name="tela_excluir" path="condicao.excluir" redirect="false" />
+			
+			<!-- Listar -->
+			<forward name="listar" path="condicao.exibir" redirect="false" />			
+		
+		</action>
+		
+		<!-- Empresa -->
+		<action
+		
+			path="/empresa"
+			type="com.nonato.spartacus.actions.EmpresaAction"
+			name="empresaForm"
+			parameter="acao"
+			scope="session"
+			validate="true"
+			input="empresa.exibir">
+			
+			<!-- Tela -->
+			<forward name="tela_inserir" path="empresa.inserir" redirect="false" />
+			<forward name="tela_alterar" path="empresa.alterar" redirect="false" />
+			<forward name="tela_excluir" path="empresa.excluir" redirect="false" />
+			
+			<!-- Listar -->
+			<forward name="listar" path="empresa.exibir" redirect="false" />
+			
+			<!-- Estrangeiro -->
+			<forward name="listar_cidade" path="empresa.cidade" redirect="false" />
+			<forward name="listar_condicao" path="empresa.condicao" redirect="false" />
+		
+		</action>	
+		
+		<!-- Login -->
+		<action
+		
+			path="/login"
+			type="com.nonato.spartacus.actions.LoginAction"
+			name="menuForm"
+			parameter="acao"
+			scope="session"
+			validate="true"
+			input="menu.login">
+			
+			<!-- Tela -->
+			<forward name="ok" path="menu.principal" redirect="false" />
+			<forward name="erro" path="menu.login" redirect="false" />
+		
+		</action>	
+		
+				
+		<!-- Lote -->
+		<action
+		
+			path="/lote"
+			type="com.nonato.spartacus.actions.LoteAction"
+			name="loteForm"
+			parameter="acao"
+			scope="session"
+			validate="true"
+			input="lote.exibir">
+			
+			<!-- Tela -->
+			<forward name="tela_inserir" path="lote.inserir" redirect="false" />
+			<forward name="tela_alterar" path="lote.alterar" redirect="false" />
+			<forward name="tela_excluir" path="lote.excluir" redirect="false" />
+			
+			<!-- Listar -->
+			<forward name="listar" path="lote.exibir" redirect="false" />	
+			
+			<!-- Estrangeiro -->
+			<forward name="listar_produto" path="lote.produto" redirect="false" />	
+		
+		</action>	
+		
+		<!-- Menu -->
+		<action
+		
+			path="/menu"
+			type="com.nonato.spartacus.actions.MenuAction"
+			name="menuForm"
+			parameter="acao"
+			scope="session"
+			validate="true"
+			input="menu.login">
+
+			<!-- Tela -->
+			<forward name="conectar" path="/login.do?acao=conectar" redirect="false" />			
+			<forward name="login" path="menu.login" redirect="false" />
+			<forward name="principal" path="menu.principal" redirect="false" />
+									
+			<!-- admin -->
+			<forward name="listar_cidades" path="/cidade.do?acao=listar" redirect="false" />
+			<forward name="listar_condicoes" path="/condicao.do?acao=listar" redirect="false" />
+			<forward name="listar_empresas" path="/empresa.do?acao=listar" redirect="false" />
+			<forward name="listar_lotes" path="/lote.do?acao=listar" redirect="false" />
+			<forward name="listar_pagamentos" path="/pagamento.do?acao=listar" redirect="false" />
+			<forward name="listar_pedidos" path="/pedido.do?acao=listar" redirect="false" />
+			<forward name="listar_produtos" path="/produto.do?acao=listar" redirect="false" />
+			<forward name="listar_promocoes" path="/promocao.do?acao=listar" redirect="false" />
+			<forward name="listar_regioes" path="/regiao.do?acao=listar" redirect="false" />
+			
+			<!-- cliente -->
+			<forward name="iniciar_pedido" path="/pedido.do?acao=listarProdutos" redirect="false" />
+			<forward name="iniciar_promocao" path="/promocao.do?acao=listarValidos" redirect="false" />
+			<forward name="consultar_produtos" path="/produto.do?acao=consultar" redirect="false" />
+			<forward name="consultar_pagamentos" path="/pagamento.do?acao=consultar" redirect="false" />
+		
+		</action>	
+		
+		<!-- Pagamento -->
+		<action
+		
+			path="/pagamento"
+			type="com.nonato.spartacus.actions.PagamentoAction"
+			name="pagamentoForm"
+			parameter="acao"
+			scope="session"
+			validate="true"
+			input="pagamento.exibir">
+			
+			<!-- Tela -->
+			<forward name="tela_alterar" path="pagamento.alterar" redirect="false" />
+			<forward name="tela_excluir" path="pagamento.excluir" redirect="false" />
+			
+			<!-- Listar -->
+			<forward name="listar" path="pagamento.exibir" redirect="false" />
+			<forward name="consultar" path="pagamento.consultar" redirect="false" />
+			
+			<forward name="boleto_bancario" path="/pages/comum/relatorio/boleto.jsp" redirect="false" />
+			
+		</action>	
+		
+		<!-- Pedido -->
+		<action
+		
+			path="/pedido"
+			type="com.nonato.spartacus.actions.PedidoAction"
+			name="itemForm"
+			parameter="acao"
+			scope="session"
+			validate="true"
+			input="pedido.produto">
+			
+			<!-- Listar -->
+			<forward name="listar" path="pedido.exibir" redirect="false" />
+			<forward name="listar_cliente" path="pedido.cliente" redirect="false" />			
+			<forward name="listar_filtro_empresa" path="/pedido.do?acao=listarPorEmpresa" redirect="false" />			
+			<forward name="nota_fiscal" path="pedido.relatorio" redirect="false" />	
+			<forward name="imprimir_nota_fiscal" path="print.pedido.relatorio" redirect="false" />						
+			<forward name="listar_produtos" path="pedido.produto" redirect="false" />
+			<forward name="listar_carrinho" path="pedido.carrinho.exibir" redirect="false" />
+			
+			<forward name="carrinho" path="pedido.carrinho" redirect="false" />		
+			
+		</action>	
+		
+		<!-- Produto -->
+		<action
+		
+			path="/produto"
+			type="com.nonato.spartacus.actions.ProdutoAction"
+			name="produtoForm"
+			parameter="acao"
+			scope="session"
+			validate="true"
+			input="produto.exibir">
+			
+			<!-- Tela -->
+			<forward name="tela_inserir" path="produto.inserir" redirect="false" />
+			<forward name="tela_alterar" path="produto.alterar" redirect="false" />
+			<forward name="tela_excluir" path="produto.excluir" redirect="false" />
+			
+			<!-- Listar -->
+			<forward name="listar" path="produto.exibir" redirect="false" />
+			<forward name="consultar" path="produto.consultar" redirect="false" />
+			
+			<!-- Estrangeiro -->
+			<forward name="listar_empresa" path="produto.empresa" redirect="false" />
+		
+		</action>	
+		
+		<!-- Produto/Promoção -->
+		<action
+		
+			path="/produtoPromocao"
+			type="com.nonato.spartacus.actions.ProdutoPromocaoAction"
+			name="produtoPromocaoForm"
+			parameter="acao"
+			scope="session"
+			validate="true"
+			input="produto_promocao.exibir">
+			
+			<!-- Tela -->
+			<forward name="tela_adicionar" path="produto_promocao.adicionar" redirect="false" />
+			<forward name="tela_alterar" path="produto_promocao.alterar" redirect="false" />
+			<forward name="tela_excluir" path="produto_promocao.excluir" redirect="false" />
+			
+			<!-- Listar -->
+			<forward name="listar" path="produto_promocao.exibir" redirect="false" />
+			<forward name="listar_produtos" path="/produtoPromocao.do?acao=listarProdutos" redirect="false" />
+			<forward name="listar_pedido" path="pedido.promocao.produto" redirect="false" />
+						
+			<forward name="adicionar_pedido" path="/promocao.do?acao=adicionar" redirect="false" />	
+					
+		</action>	
+		
+		<!-- Promoção -->
+		<action
+		
+			path="/promocao"
+			type="com.nonato.spartacus.actions.PromocaoAction"
+			name="promocaoForm"
+			parameter="acao"
+			scope="session"
+			validate="true"
+			input="promocao.exibir">
+			
+			<!-- Tela -->
+			<forward name="tela_inserir" path="promocao.inserir" redirect="false" />
+			<forward name="tela_alterar" path="promocao.alterar" redirect="false" />
+			<forward name="tela_excluir" path="promocao.excluir" redirect="false" />
+			
+			<!-- Listar -->
+			<forward name="listar" path="promocao.exibir" redirect="false" />
+			<forward name="listar_filtro_empresa" path="/pedido.do?acao=listarPorEmpresa" redirect="false" />	
+			<forward name="listar_validos" path="pedido.promocao.listar" redirect="false" />
+			
+			<forward name="listar_carrinho" path="pedido.promocao.carrinho" redirect="false" />
+			<forward name="listar_carrinho_exibir" path="pedido.promocao.carrinho.exibir" redirect="false" />
+									
+			<!-- Estrangeiro -->
+			<forward name="listar_produtos" path="/produtoPromocao.do?acao=listarProdutos" redirect="false" />
+			<forward name="listar_produtos_pedido" path="/produtoPromocao.do?acao=listarProdutosParaPedido" redirect="false" />
+			
+		</action>	
+		
+		<!-- Região -->
+		<action
+		
+			path="/regiao"
+			type="com.nonato.spartacus.actions.RegiaoAction"
+			name="regiaoForm"
+			parameter="acao"
+			scope="session"
+			validate="true"
+			input="regiao.inserir">
+			
+			<!-- Tela -->
+			<forward name="tela_inserir" path="regiao.inserir" redirect="false" />
+			<forward name="tela_alterar" path="regiao.alterar" redirect="false" />
+			<forward name="tela_excluir" path="regiao.excluir" redirect="false" />
+			
+			<!-- Listar -->
+			<forward name="listar" path="regiao.exibir" redirect="false" />	
+			
+			<!-- Estrangeiro -->			
+			<forward name="listar_empresa" path="regiao.empresa" redirect="false" />	
+			<forward name="listar_cidades" path="/cidadeRegiao.do?acao=listarCidades" redirect="false" />
+		
+		</action>	
+		
+		<!-- Relatórios -->
+		<action
+		
+			path="/relatorio"
+			type="com.nonato.spartacus.actions.RelatorioAction"
+			name="menuForm"
+			parameter="acao"
+			scope="session"
+			validate="true"
+			input="menu.principal">
+						
+			<!-- Listar -->
+			<forward name="listar_clientes_debito" path="relatorio.clientes.debito" redirect="false" />				
+			<forward name="listar_produtos_vendidos" path="relatorio.produtos.vendido" redirect="false" />	
+			<forward name="listar_vendas_regiao" path="relatorio.vendas.regiao" redirect="false" />
+		
+		</action>
+				
+	</action-mappings>
+	<!-- Fim da Definição de Action-Mappings -->
+	
+	<!-- Configurando o Controlador do Tiles -->
+	<controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+    <!-- Configurando a Coleção de Mensagens da Aplicação -->
+	<message-resources parameter="com.nonato.spartacus.msg.Application"/>
+	
+	<!-- Configurando o Tiles -->
+	<plug-in className="org.apache.struts.tiles.TilesPlugin" >
+		<set-property property="definitions-config" 
+		value="/WEB-INF/conf/tiles-defs.xml, /WEB-INF/conf/tiles-spartacus.xml" />
+		<set-property property="moduleAware" value="true" />
+		<set-property property="definitions-parser-validate" value="true" />
+	</plug-in>
+	
+</struts-config>
+
